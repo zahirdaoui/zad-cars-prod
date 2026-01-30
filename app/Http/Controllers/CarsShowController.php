@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
 use Spatie\FlareClient\View;
 
 class CarsShowController extends Controller
@@ -18,7 +19,8 @@ class CarsShowController extends Controller
         $cars = Cars::limit(3)->get();
         $data_cars_ville = DB::table('cars')->select('ville')->distinct()->get();
         $data_cars_name = DB::table('cars')->select('name')->distinct()->get();
-        return view('user.index',compact('cars','data_cars_name','data_cars_ville'));
+        $status = false;
+        return view('user.index',compact('cars','data_cars_name','data_cars_ville','status'));
     }
 
     public function allcars(Request $request)
@@ -116,7 +118,6 @@ class CarsShowController extends Controller
     }
     public function contact(Request $request)
     {
-         $status = false;
          $fullName =$request->fullName;
          $emailUser =$request->email;
          $phoneUser =$request->phone;
@@ -124,10 +125,10 @@ class CarsShowController extends Controller
          $messageText = $request->body;
 
          if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] =="POST"){
-            $status = true;
             $this->sendEmail($fullName, $emailUser, $phoneUser, $subject, $messageText);
+            return Redirect::back()->with('message','Operation Successful !');
          }
-       return view('user.contact',["status"=>$status]);
+       return view('user.contact');
     }
 
     public function sendEmail($fullName, $emailUser, $phoneUser, $subject, $messageText)

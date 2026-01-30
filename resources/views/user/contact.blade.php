@@ -42,7 +42,7 @@
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-6">
-          @if($status)
+          @if(Session::get('message'))
           <div class="alert alert-success" role="alert">
              Votre message a été envoyé avec succès.
           </div>
@@ -54,7 +54,6 @@
               <div class="col-md-6">
                 <label class="form-label">Nom complet</label>
                 <input name="fullName" type="text" class="form-control" placeholder="Ahmed Benjelloun" required>
-                
               </div>
               <div class="col-md-6">
                 <label class="form-label">Email</label>

@@ -205,49 +205,81 @@
   </section>
 {{-- ==================== --}}
 <!-- start contact us -->
-  <section id="contact" class="section-padding container">
-    <h2 class="text-center mb-5">NOUS CONTACTER</h2>
-    <div class="row g-5">
-        <div class="col-lg-7">
-            <div class="bg-light p-4">
-                <form>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control border-0 py-3" placeholder="Votre Nom">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="email" class="form-control border-0 py-3" placeholder="Votre Email">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control border-0 py-3" placeholder="Sujet">
-                        </div>
-                        <div class="col-12">
-                            <textarea class="form-control border-0 py-3" rows="5" placeholder="Votre Message"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">ENVOYER LE MESSAGE</button>
-                        </div>
-                    </div>
-                </form>
+  <section class="py-5 mb-5">
+    <div class="container">
+        <h1 class="text-center mb-5">NOUS CONTACTER</h1>
+      <div class="row g-5">
+        <div class="col-lg-6">
+          @if(Session::get('message'))
+          <div class="alert alert-success" role="alert">
+             Votre message a été envoyé avec succès.
+          </div>
+          @endif
+          <h2 class="fw-bold mb-4">Envoyez-nous un message</h2>
+          <form id="contactForm" action="{{ route('contact')}}" method="POST">
+            @csrf
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nom complet</label>
+                <input name="fullName" type="text" class="form-control" placeholder="Ahmed Benjelloun" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input name="email" type="email" class="form-control" placeholder="ahmed@mail.com" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Téléphone (Optionnel)</label>
+                <input name="phone" type="tel" class="form-control" placeholder="06 00 00 00 00">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Sujet</label>
+                <select name="subject" class="form-select form-control">
+                  <option selected>Achat d'un véhicule</option>
+                  <option>Vendre ma voiture</option>
+                  <option>Financement & Crédit</option>
+                  <option>Autre demande</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea name="body" class="form-control" rows="6" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Envoyer le message</button>
+              </div>
             </div>
+          </form>
         </div>
-        <div class="col-lg-5">
-            <div class="bg-secondary p-5 text-white h-100">
-                <h4 class="mb-4">Informations</h4>
-                <div class="d-flex mb-4">
-                    <i class="fas fa-map-marker-alt text-primary mt-1 me-3"></i>
-                    <p>123 Boulevard d'Anfa, Casablanca, Maroc</p>
-                </div>
-                <div class="d-flex mb-4">
-                    <i class="fas fa-phone-alt text-primary mt-1 me-3"></i>
-                    <p>+212 5 00 00 00 00</p>
-                </div>
-                <div class="d-flex mb-4">
-                    <i class="fas fa-envelope text-primary mt-1 me-3"></i>
-                    <p>zadcars@ezzahir.ma</p>
-                </div>
+
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-4">Où nous trouver</h2>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53192.85324003233!2d-7.632560!3d33.589163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2927d0d071b%3A0x67a916943b94090!2sCasablanca!5e0!3m2!1sfr!2sma!4v1700000000000" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="mt-4">
+            <h5 class="fw-bold">Horaires d'ouverture :</h5>
+            <div class="d-flex justify-content-between border-bottom py-2">
+              <span>Lundi - Vendredi</span>
+              <span class="fw-bold">09:00 - 19:00</span>
             </div>
+            <div class="d-flex justify-content-between border-bottom py-2">
+              <span>Samedi</span>
+              <span class="fw-bold">09:00 - 16:00</span>
+            </div>
+            <div class="d-flex justify-content-between py-2 text-danger">
+              <span>Dimanche</span>
+              <span class="fw-bold">Fermé</span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </section>
 
