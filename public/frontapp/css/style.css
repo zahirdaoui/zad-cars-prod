@@ -1,0 +1,487 @@
+
+    :root {
+      --primary: #e67e22;
+      --primary-dark: #d35400;
+      --secondary: #1a3c6d;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #28a745;
+      --transition: all 0.3s ease;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--dark);
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .btn-primary:hover { background-color: var(--primary-dark); }
+
+/* Home page  */
+    /* Utilitaires */
+    .text-primary { color: var(--primary) !important; }
+    .bg-secondary-dark { background-color: var(--secondary); }
+    .section-padding { padding: 80px 0; }
+    
+    /* Navbar */
+    .navbar {
+      background-color: var(--secondary) !important;
+      padding: 15px 0;
+    }
+
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .nav-link {
+      color: white !important;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+    .nav-link:hover { color: var(--primary) !important; }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(26, 60, 109, 0.7), rgba(26, 60, 109, 0.7)), 
+                  url('../images/pexels-koprivakart-3354648.jpg') center/cover;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3.5rem; font-weight: 700; }
+
+    /* Search Bar Overlay */
+    .search-container {
+      margin-top: -50px;
+      z-index: 10;
+      position: relative;
+    }
+    .search-box {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Cards */
+    .car-card {
+      border: none;
+      background: var(--light);
+      transition: var(--transition);
+      height: 100%;
+    }
+    .car-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    .car-img-container {
+      overflow: hidden;
+      position: relative;
+    }
+    .car-card img {
+      transition: var(--transition);
+      height: 200px;
+      object-fit: cover;
+    }
+    .car-card:hover img { transform: scale(1.1); }
+    .price-tag {
+      background: var(--primary);
+      color: white;
+      padding: 5px 15px;
+      font-weight: bold;
+    }
+
+    /* Services Section */
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover { color: white; background-color: #128c7e; }
+
+    .btn-primary { background-color: var(--primary); border-color: var(--primary); padding: 10px 25px; border-radius: 0; }
+   /*  .btn-primary:hover { background-color: var(--primary-dark); border-color: var(--primary-dark); } */
+
+    footer { background-color: #111; color: #bbb; padding: 60px 0 20px; }
+    footer h5 { color: white; margin-bottom: 25px; }
+/* car  */
+
+ 
+    /* Galerie */
+    .main-img {
+      height: 500px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 8px;
+    }
+    .thumb-img {
+      height: 100px;
+      object-fit: cover;
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 4px;
+    }
+    .thumb-img:hover { opacity: 0.8; border: 2px solid var(--primary); }
+
+    /* Specs */
+    .spec-item {
+      padding: 15px;
+      background: var(--light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .spec-icon {
+      width: 40px;
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+
+    .price-badge {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .sticky-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .btn-whatsapp {
+      background-color: #25d366;
+      color: white;
+      border: none;
+    }
+    .btn-whatsapp:hover { background-color: #128c7e; color: white; }
+
+    .btn-primary { background-color: var(--primary); border-color: var(--primary); }
+    
+    footer { background-color: #111; color: #bbb; padding: 40px 0; }
+
+    /* similaire cars */
+    .car-card {
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+    .car-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12) !important;
+    }
+    .car-img-container {
+      overflow: hidden;
+    }
+    .car-card img {
+      transition: transform 0.5s ease;
+      height: 200px;
+      object-fit: cover;
+    }
+    .car-card:hover img {
+      transform: scale(1.1);
+    }
+
+    /* =============================== our stock =========================================== */
+    
+    /* Filter Sidebar */
+    .filter-sidebar {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 100px;
+    }
+
+    .filter-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+    }
+
+    /* Car Card Listing */
+    .car-card-list {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background: white;
+      margin-bottom: 25px;
+    }
+    .car-card-list:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .car-card-list img {
+      height: 220px;
+      object-fit: cover;
+    }
+    .price-tag {
+      color: var(--light);
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .spec-badge {
+      background: var(--light);
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .btn-primary { background-color: var(--primary); border: none; }
+ /*    .btn-primary:hover { background-color: var(--primary-dark); } */
+
+    .page-header {
+      background-color: var(--secondary);
+      padding: 40px 0;
+      color: white;
+      margin-bottom: 40px;
+    }
+
+    .form-label { font-weight: 500; font-size: 0.9rem; }
+
+
+  /*  Marque */
+   /* Exact Background Color from Screenshot */
+        .vendor-section {
+            background-color: #ffffff;
+            padding: 60px 0;
+        }
+
+        /* Logo Container Styling */
+        .vendor-item {
+            background: #F0F2F5; /* The specific light grey-blue tint */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 160px; /* Fixed height for consistency */
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .vendor-item img {
+            width: 85px !important; /* Fixed size to match the uniform look */
+            height: 85px !important;
+            object-fit: contain;
+        }
+
+        /* Pagination Dots - Precise Style */
+        .owl-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            gap: 6px; /* Space between squares */
+        }
+
+        .owl-dot {
+            border: none !important;
+            outline: none !important;
+            padding: 0 !important;
+        }
+
+        .owl-dot span {
+            display: block;
+            width: 18px; /* Square shape */
+            height: 18px;
+            background: #2C2D3F !important; /* Dark Navy from image */
+            transition: all 0.3s ease;
+            border-radius: 0 !important; /* Ensures they are squares, not circles */
+        }
+
+        /* Active Dot - Stretched Orange */
+        .owl-dot.active span {
+            background: #F47E1F !important; /* Specific Orange */
+            width: 38px; /* Double width like the image */
+        }
+
+    /* =====================================contact nous =============================*/
+
+    
+    .contact-header {
+      background: linear-gradient(rgba(26, 60, 109, 0.8), rgba(26, 60, 109, 0.8)), 
+                  url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200') center/cover;
+      padding: 100px 0;
+      color: white;
+      text-align: center;
+    }
+
+    .info-box {
+      padding: 40px;
+      height: 100%;
+      background: var(--light);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .info-box:hover { transform: translateY(-5px); }
+
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .form-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 0.25rem rgba(230, 126, 34, 0.15);
+    }
+
+    .btn-primary { 
+      background-color: var(--primary); 
+      border: none; 
+      padding: 12px 30px; 
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+
+    .map-container {
+      height: 450px;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+/* ======================================================================================*/
+
+/* ======================General Conditions and Legal Mentions ============================ */
+
+
+    .legal-header {
+      background-color: var(--light);
+      padding: 60px 0;
+      border-bottom: 1px solid #dee2e6;
+      margin-bottom: 50px;
+    }
+
+    .sidebar-nav {
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar-nav a {
+      display: block;
+      padding: 10px 15px;
+      color: var(--secondary);
+      text-decoration: none;
+      border-left: 3px solid transparent;
+      transition: 0.3s;
+    }
+
+    .sidebar-nav a:hover, .sidebar-nav a.active {
+      background: var(--light);
+      border-left-color: var(--primary);
+      font-weight: 500;
+    }
+
+   .conditions-title { color: var(--secondary); font-weight: 700; margin-bottom: 20px; font-size: 1.75rem; }
+   .conditions-title-secondary{ color: var(--dark); font-weight: 600; margin-top: 25px; }
+
+   
+/* ================================================================================== */
+
+/*  Notre Histoire & Nos Engagements */
+    /* Header Section */
+    .about-header {
+      background: linear-gradient(rgba(26, 60, 109, 0.85), rgba(26, 60, 109, 0.85)), 
+                  url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=1200') center/cover;
+      padding: 120px 0;
+      color: white;
+      text-align: center;
+    }
+
+    .section-title {
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    .value-card {
+      border: none;
+      padding: 30px;
+      background: var(--light);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .value-card:hover {
+      background: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+    }
+
+    .icon-box {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .stat-box {
+      background: var(--secondary);
+      color: white;
+      padding: 40px 0;
+    }
+
+    .team-img {
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }

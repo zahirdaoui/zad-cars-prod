@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} !^http://www.zad-car.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.zad-car.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://zad-car.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://zad-car.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.zad-car.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.zad-car.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://zad-car.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://zad-car.com$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+

@@ -1,0 +1,70 @@
+.Selection-cars{
+    background-color: rgba(9, 17, 17, 0.316);
+    padding: 20px;
+    border-radius: 20px;
+    &-select-content{
+        display: flex;
+        width: 100%;
+        select{
+            width:80%;
+            margin-top: 17px;
+            margin-right: 10px;
+        }
+    }
+    &-range{
+        padding-top: 25px;
+        label{
+            font-weight: 700;
+        }
+        .number-range{
+            float: right;
+            color: $color-black;
+        }
+    }
+    button{
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+
+}
+.nav-pagination{
+    margin-left:85%!important;
+    margin-right: 0px;
+}
+.panination-item{
+   text-align: center;
+}
+
+@media screen and (max-width:540px){
+    .Selection-cars{
+        &-select-content{
+            display: block;
+            width: 100%;
+            select{
+                width:80%;
+                margin: auto;
+                margin-top: 10px;
+            }
+        }
+
+       /*  &-select{
+            margin-left: 0px;
+            display: flex;
+            flex-direction: row!important;
+            min-width: 100%;
+            select{
+            }
+        } */
+    }
+    .nav-pagination{
+       margin: 0px!important;
+       padding-left:35%!important;
+       padding-top: 30px!important;
+       width: 100%;
+    }
+
+}

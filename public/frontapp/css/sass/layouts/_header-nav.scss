@@ -1,0 +1,17 @@
+
+.nav-bar{
+    background-color: $main-color;
+    &-main{
+        a{
+            color: $color-white;
+            font-size: 19px;
+            font-weight: 600;
+            transition: all 0.5s;
+            text-transform: uppercase;
+            &:hover{
+                @extend %hoverlink;
+                border-bottom: 2px solid $color-black;
+            }
+        }
+    }
+}

@@ -1,0 +1,304 @@
+.section-search-cars{
+    height: fit-content;
+    background-color: $main-color;
+    &-select{
+        width: 70%;
+        margin: auto;
+        select{
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        a{
+            width: 100%;
+            height: 38px;
+            font-size: 15px;
+            text-align: center;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+}
+/* ================================ */
+
+.latest-cars-add{
+
+    background-color: $color-dark-opacity;
+    &-item{
+        transition: all 0.5s;
+        margin-bottom: 10px;
+        width: 250px!important;
+        margin-left: 10px;
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            background-color: $main-color;
+            color: white;
+        }
+        .card-cars{
+            width: 120px !important;
+            height: 3000px!important;
+        }
+       .card-body-cars{
+           margin-left: -23px;
+                .price-cars{
+                    margin-left: 20px;
+                    font-size: 20px;
+                    font-weight: 900;
+                    color:  #a20b0b;
+                    border: 1px solid $color-black;
+                    background-color: #ffffff;
+                    border-radius: 10px;
+                    padding: 3px;
+                }
+                a{
+                    margin-top: 10px;
+                    width: 90%;
+                    margin: auto;
+                    margin-top: 10px;
+                    margin-left: 22px;
+                }
+
+       }
+        ul{
+            border-top: 1px solid $color-gray;
+            width:100%;
+            padding-left: 0;
+            margin-bottom: 0;
+            li{
+                display: flex;
+                padding-right: 2px;
+                padding-top: 5px;
+                height: 30px;
+                i{
+                    padding-right: 3px;
+                }
+                span{
+                    font-size: 10px;
+                    font-weight: 700;
+                }
+            }
+            li:not(:last-child){
+                border-right: 2px solid $color-gray;
+            }
+        }
+    }
+
+    .btn-show-more{
+        margin-left: 40%;
+        text-transform: uppercase;
+        background-color: $main-color;
+        outline: none;
+        border: none;
+        font-weight: bold;
+    }
+}
+
+/* famous-car-brands */
+.famous-car-brands{
+    background-color: $color-gray;
+    img{
+        width: 90px;
+    }
+
+}
+/* start any-questions */
+.any-questions{
+    &-content{
+        background-color:$color-gray;
+        padding: 10px;
+
+        border-radius: 10px;
+        &:hover{
+            box-shadow: $gray-shadow;
+            cursor: pointer;
+        }
+        a{
+            width: 100px;
+            background-color: $main-color;
+            outline: none;
+            border: none;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        h1{
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+    }
+}
+/* end any-questions */
+/* start contact-us */
+.contact-us{
+    height: 100vh;
+    background-image: url('../images/back/cars.jpg');
+    background-size: cover;
+    /* this fro message envoi */
+    .envoi-message{
+        width: 60%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    &-item{
+
+        &-logo{
+            font-size: 300px;
+        }
+
+        &-form{
+            position: relative;
+            input{
+                width: 250px;
+                border-radius: 10px;
+                outline: none;
+                border: 1px solid $color-gray;
+                padding-left: 30px;
+            }
+            textarea{
+                width: 250px;
+                border-radius: 10px;
+                padding-left:30px ;
+                border: 1px solid $color-gray;
+            }
+            div i{
+                position: absolute;
+                margin-left: 7px;
+                margin-top: 4px;
+            }
+            .erore-form{
+                visibility: hidden;
+                font-weight: 500;
+                color: red!important;
+            }
+            .erore-icon{
+                color: red;
+                visibility: hidden;
+            }
+            button{
+                width: 250px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .icon-send-message{
+                position: absolute;
+                margin-top: 6px;
+                margin-left: 20px;
+                font-size: 25px;
+            }
+        }
+    }
+
+    /* form errors */
+    &-item-form{
+
+/*         padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        margin-left: 30px;
+        min-width: 200px!important; */
+        .parentdiv{
+            .erore-form{
+                visibility: visible;
+            }
+            .erore-icon{
+                color: red;
+                visibility: visible;
+            }
+
+        }
+    }
+}
+
+/* end contact-us */
+/* start best number  */
+.section-numbers{
+    i{
+        font-size: 40px;
+        margin-right: 10px;
+    }
+    &-item{
+        h2{
+            font-weight: 900;
+        }
+    }
+}
+/* end best number  */
+/* start footer */
+.footer{
+    background-color: $color-black;
+    color: white;
+    ul {
+        li{
+            margin-bottom: 10px;
+            a{
+                text-decoration: none;
+                color: $color-white;
+                &:hover{
+                    color: $main-color;
+                }
+            }
+        }
+    }
+    .footer-item-aboutus{
+        ul{
+            display: flex;
+            margin-left: -34px;
+            li{
+                margin-right: 10px;
+                i{
+                    font-size: 25px;
+                    color:$color-white;
+                    &:hover{
+                        color: $main-color;
+                    }
+                }
+            }
+
+        }
+        .footer-item-cars{
+            ul {
+                li{
+                    a{
+                        text-decoration: none;
+                        color: $color-white;
+                        &:hover{
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* end footer */
+/* start footer copy right */
+footer{
+    background-color: $main-color;
+    color: $color-black;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+/* end footer copy right */
+@media screen and (max-width:576px){
+    /* header */
+
+    /* contact us */
+    .contact-us{
+        form{
+            margin-left:-50px;
+            .parentdiv{
+                  .erore-icon{
+                       visibility: hidden;
+                 }
+                 .erore-form{
+                    font-weight: 800;
+                    font-size: 13px;
+                 }
+            }
+        }
+    }
+
+}
+
+
+
+

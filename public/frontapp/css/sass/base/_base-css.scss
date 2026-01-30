@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/* title section */
+.title-section{
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    h1{
+        font-weight: 800;
+        letter-spacing: 5px;
+    }
+}
+/* title section */
+.title-section-global{
+    color:$main-color;
+    font-weight: 800;
+}

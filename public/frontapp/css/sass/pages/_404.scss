@@ -1,0 +1,25 @@
+.page-erore{
+    background-image: url('../images/back/front.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    text-align:center;
+    padding-top: 2%;
+    color:white;
+    h1{
+        font-size:250px;
+        font-weight:900;
+    }
+    span{
+        font-size:50px;
+        font-weight: 900px;
+    }
+    p{
+        font-size:30px;
+        font-weight: bolder;
+    }
+    a{
+        font-weight: 900;
+        background-color:$main-color;
+    }
+}
