@@ -90,7 +90,7 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="price-tag">{{$item->price}} DH</span>
-                  <a  href="{{url('show')}}/{{$item->id}}" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-eye"></i></a>
+                  <a href="{{url('show')}}/{{$item->id}}" class="btn btn-outline-dark btn-sm">Détails</a>
                 </div>
               </div>
             </div>
