@@ -20,8 +20,13 @@
           <p class="text-muted me-4"> <i class="fas fa-calendar me-2"></i> {{$cars->created_at->format('Y.m.d')}}</p>
           <p class="text-muted me-4"><i class="fas fa-calendar me-2"></i>anonce N° {{$cars->id}} </p>
         </div>
-        
-        
+        @if(Session::get('message'))
+          <div class="alert alert-success" role="alert">
+             @php
+               echo Session::get('message');
+             @endphp
+          </div>
+          @endif
         <div class="mb-4">
           @if (file_exists('dataimg/covercars/'.$cars->cover))
               <img src="{{url('dataimg/covercars/')}}/{{$cars->cover}}"  id="mainView" class="main-img shadow-sm mb-3" alt="{{$cars->name}}">
@@ -125,7 +130,6 @@
       </div>
     </div>
   </div>
-
   <div class="modal fade" id="modalEssai" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -134,18 +138,22 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form action="{{ route('reservationMessage')}}" method="POST">
+            @csrf
             <div class="mb-3">
               <label class="form-label">Nom complet</label>
-              <input type="text" class="form-control" placeholder="Ex: Ahmed Benjelloun">
+              <input type="text" name="fullName" class="form-control" placeholder="Ex: Ahmed Benjelloun" required>
             </div>
             <div class="mb-3">
               <label class="form-label">Téléphone</label>
-              <input type="tel" class="form-control" placeholder="06 00 00 00 00">
+              <input type="tel" name="phone" class="form-control" placeholder="06 00 00 00 00" required>
             </div>
             <div class="mb-3">
               <label class="form-label">Date souhaitée</label>
-              <input type="date" class="form-control">
+              <input type="date" name="date_rserve" class="form-control" required>
+            </div>
+            <div class="mb-3 d-none">
+              <input type="text" value="{{url('show')}}/{{$cars->id}}" name="url">
             </div>
             <button type="submit" class="btn btn-primary w-100">Confirmer la demande</button>
           </form>

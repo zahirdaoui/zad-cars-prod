@@ -50,22 +50,6 @@
                 <span id="priceVal">{{$data_search_cars['max_price']}}</span>
               </div>
             </div>
-            {{-- <div class="mb-3">
-              <label class="form-label">Carburant</label>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="diesel" checked>
-                <label class="form-check-label small" for="diesel">Diesel</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="essence">
-                <label class="form-check-label small" for="essence">Essence</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="hybride">
-                <label class="form-check-label small" for="hybride">Hybride / Électrique</label>
-              </div>
-            </div> --}}
-
             <div class="mb-4">
               <label class="form-label">Année minimum</label>
               <select class="form-select">

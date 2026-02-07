@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ReservationTest;
 use App\Mail\TestMail;
 use App\Models\Cars;
 use Illuminate\Http\Request;
@@ -9,7 +10,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
-use Spatie\FlareClient\View;
 
 class CarsShowController extends Controller
 {
@@ -112,10 +112,29 @@ class CarsShowController extends Controller
         }
         return view('user.showcar',compact('cars','fcars'));
     }
+
+ 
     public function AboutUs()
     {
         return view('user.aboutus');
     }
+
+
+   public function reservationMessage(Request $request){
+         $fullName =$request->fullName;
+         $phoneUser =$request->phone;
+         $date_rserve = $request->date_rserve;
+         $cars_url = $request->url;
+
+         if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] =="POST"){
+            Mail::to('alirassimi00@gmail.com')->send(
+              new ReservationTest($fullName,$phoneUser,$date_rserve, $cars_url )
+            );
+            return Redirect::back()->with('message','Votre réservation a été envoyée avec succès.');
+         }
+         return Redirect::back();
+    }
+
     public function contact(Request $request)
     {
          $fullName =$request->fullName;
@@ -138,10 +157,6 @@ class CarsShowController extends Controller
         Mail::to('alirassimi00@gmail.com')->send(
             new TestMail($fullName, $emailUser, $phoneUser, $subject, $messageText)
         );
-
-      /*  $status = true;
-      // return redirect()->to('/contact',["success"=>$success]);
-      return view('user.contact',["success"=>$success]); */
   
     }
 

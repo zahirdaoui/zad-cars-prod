@@ -14,7 +14,8 @@ Route::get('/','CarsShowController@index');
      Route::get('contact','CarsShowController@contact')->name('contact');
       Route::post('contact','CarsShowController@contact')->name('contact');
      Route::post('sendemail','CarsShowController@sendEmail')->name('sendemail');
-     
+    Route::post('reservationMessage','CarsShowController@reservationMessage')->name('reservationMessage');
+
      Route::get('conditions','CarsShowController@conditions')->name('conditions');
 
      
